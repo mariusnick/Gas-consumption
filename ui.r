@@ -7,6 +7,8 @@ library(ggplot2)
 shinyUI(
   fluidPage(
     titlePanel(" Residential Natural Gas Consumption "),
+   
+     downloadLink('downloadData', 'About App'),
 
     # Create a new Row in the UI for selectInputs
     fluidRow(
@@ -41,8 +43,10 @@ shinyUI(
   
   mainPanel (
         plotOutput("Plot"),
-        h3("Total Consumation for winter [mc]:"),
+        h3("TOTAL GAS  FOR WINTER [cubic meter]"),
         h3(textOutput(    "text1"   ))
-        )
+        
+        
+       )
   )
 )
